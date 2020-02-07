@@ -14,11 +14,12 @@ die() {
 
 hc() {
   if [[ $1 = 0 ]] ; then
-    curl -s ${HC_URL}
+    curl -s ${HC_URL} > /dev/null
     die 0 "backup successful [ SRC=${SRC} DST=${DST} HC_URL=${HC_URL} ]"
   fi
-  curl -s ${HC_URL}/fail
+  curl -s ${HC_URL}/fail > /dev/null
   die 0 "backup failed [ SRC=${SRC} DST=${DST} HC_URL=${HC_URL} ]"
 }
 
-rclone sync ${SRC} ${DST} -P && hc 0 || hc 1
+echo "run backup:"
+/rclone sync ${SRC} ${DST} -P && hc 0 || hc 1
