@@ -13,7 +13,7 @@ Docker Container for making backups with rclone and update healthchecks.io
 |--------|-----------|-------|
 |`SRC`|Source folder|`/data`|
 |`DST`|Destination||
-|`HC\_URL`|The Ping URL of healthchecks.io||
+|`HC_URL`|The Ping URL of healthchecks.io||
 
 ## example of run backup
 
