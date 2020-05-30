@@ -1,4 +1,4 @@
-FROM 300481/rclone:1.51.0-3.11.3
+FROM 300481/rclone:1.52.0-3.12.0
 
 RUN apk -U --no-cache add ca-certificates curl
 
