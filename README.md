@@ -2,6 +2,8 @@
 
 Docker Container for making backups with rclone and update healthchecks.io
 
+[![Docker Build](https://github.com/300481/backup-hc/actions/workflows/docker_build.yaml/badge.svg)](https://github.com/300481/backup-hc/actions/workflows/docker_build.yaml)
+
 ## volumes
 
 * /root/.config/rclone
