@@ -1,9 +1,9 @@
 ##########################################################################################
 
-FROM alpine:3.14.0 AS downloader
+FROM alpine:3.14.2 AS downloader
 
 RUN apk -U --no-cache add ca-certificates wget && \
-    VERSION=v1.56.0 && \
+    VERSION=v1.56.1 && \
     cd /tmp && \
     wget -q https://downloads.rclone.org/${VERSION}/rclone-${VERSION}-linux-amd64.zip && \
     unzip rclone-${VERSION}-linux-amd64.zip && \
@@ -14,7 +14,7 @@ RUN apk -U --no-cache add ca-certificates wget && \
 
 ##########################################################################################
 
-FROM alpine:3.14.0
+FROM alpine:3.14.2
 
 RUN apk -U --no-cache add ca-certificates curl
 
