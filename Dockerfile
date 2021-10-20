@@ -3,7 +3,7 @@
 FROM alpine:3.14.2 AS downloader
 
 RUN apk -U --no-cache add ca-certificates wget && \
-    VERSION=v1.56.1 && \
+    VERSION=v1.56.2 && \
     cd /tmp && \
     wget -q https://downloads.rclone.org/${VERSION}/rclone-${VERSION}-linux-amd64.zip && \
     unzip rclone-${VERSION}-linux-amd64.zip && \
